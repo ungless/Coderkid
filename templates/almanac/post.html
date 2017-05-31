@@ -1,0 +1,25 @@
+{% extends "almanac/base.html" %}
+
+{% block title %}{{ post.title }} | {{ post.almanac.title }} - {% endblock %}
+
+{% block content %}
+    <main>
+        <h2>{{ post.title }}</h2>
+        
+        <div class="post-content">
+            <p>
+                {{ post.content }}
+            </p>
+        </div>
+
+        <div class="post-examples">
+            <ul>
+                {% for example in examples %}
+                    <li>
+                        <a href="{{ example.get_absolute_url }}">{{ example.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+{% endblock %}
