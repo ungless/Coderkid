@@ -28,13 +28,20 @@ class PostView(generic.DetailView):
     slug_url_kwarg = "post_slug"
 
     def get_queryset(self):
-        self.obj = models.Almanac.objects.filter(slug=self.kwargs["slug"])
+        self.obj = models.Post.objects.filter(slug=self.kwargs["post_slug"]).filter(almanac__slug=self.kwargs["almanac_slug"])
         return self.obj
 
     def get_context_data(self, *args, **kwargs):
         context = super(PostView, self).get_context_data(**kwargs)
-        context["examples"] = model.Example.objects.filter(post=self.obj)
+        context["examples"] = models.Example.objects.filter(post=self.obj)
         return context
 
 class ExampleView(generic.DetailView):
-    pass
+    template_name = "almanac/example.html"
+    context_object_name = "example"
+    slug_url_kwarg = "example_slug"
+
+    def get_queryset(self):
+        self.obj = models.Example.objects.filter(slug=self.kwargs["example_slug"]).filter(post__slug=self.kwargs["post_slug"])
+        return self.obj
+

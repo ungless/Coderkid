@@ -1,0 +1,19 @@
+{% extends "almanac/base.html" %}
+
+{% block title %}{{ example.title }} | {{ example.post.almanac.title }} - {% endblock %}
+
+{% block content %}
+    <main>
+        <h2>{{ example.name }}</h2>
+
+        <div class="example-content">
+            <p>
+                <pre>
+                    <code>
+                        {{ example.code }}
+                    </code>
+                </pre>
+            </p>
+        </div>
+    </main>
+{% endblock %}

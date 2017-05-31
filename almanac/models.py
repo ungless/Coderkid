@@ -33,7 +33,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("post", kwargs={"slug": self.slug})
+        return reverse("post", kwargs={"almanac_slug": self.almanac.slug, "post_slug": self.slug})
 
     def save(self, *args, **kwargs):
         if not self.pk:
@@ -52,7 +52,7 @@ class Example(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("example", kwargs={"slug": self.slug})
+        return reverse("example", kwargs={"almanac_slug": self.post.almanac.slug, "post_slug": self.post.slug, "example_slug": self.slug})
 
     def save(self, *args, **kwargs):
         if not self.pk:
