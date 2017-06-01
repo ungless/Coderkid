@@ -4,6 +4,7 @@
 
 {% block content %}
     <main>
+        <a href="{% url 'almanac' post.almanac.slug %}">Back</a>
         <h2>{{ post.title }}</h2>
         
         <div class="post-content">
