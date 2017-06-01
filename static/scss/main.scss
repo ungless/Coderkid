@@ -4,13 +4,17 @@ $main-color: red;
 $secondary-color: goldenrod;
 $main-gray: lightgray;
 
-$display-font: 'Arial', sans-serif;
-$content-font: sans-serif;
+$python-yellow: #FFD53B; 
+
+$display-font: 'Kumar One', serif;
+$content-font: 'Roboto', sans-serif;
 
 $transition: 0.3s all;
 
 
 /* [============] Imports [============] */
+
+@import url('https://fonts.googleapis.com/css?family=Kumar+One|Roboto');
 
 @import "general";
 @import "almanacs";
