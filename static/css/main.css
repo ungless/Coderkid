@@ -1,0 +1,63 @@
+/* [============] Variables [============] */
+/* [============] Imports [============] */
+* {
+  padding: 0.3em;
+  margin: 0.3em;
+  box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial", sans-serif; }
+
+a, p, ul, ol, body {
+  font-family: sans-serif; }
+
+a {
+  color: red;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+  a:focus {
+    color: goldenrod; }
+
+.container {
+  position: relative;
+  min-height: 100%; }
+
+header#index-header h1 {
+  text-align: center; }
+
+main#index-content {
+  padding-bottom: 7em; }
+
+footer#index-footer {
+  background: #545454;
+  margin: 0px;
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  left: 0;
+  width: 100%;
+  height: 7em; }
+
+section#latest-almanacs {
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+  section#latest-almanacs .almanac {
+    transform: rotate(-4deg);
+    background: lightgray;
+    padding: 4em 4em;
+    margin: 0 -2em;
+    width: calc(100% + 8em); }
+    section#latest-almanacs .almanac .almanac-title-content {
+      transform: rotate(4deg); }
+      section#latest-almanacs .almanac .almanac-title-content h3 a {
+        font-size: 35px;
+        color: white;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+/* [============] Variables [============] */
+
+$main-color: red;
+$secondary-color: goldenrod;
+$main-gray: lightgray;
+
+$display-font: 'Arial', sans-serif;
+$content-font: sans-serif;
+
+$transition: 0.3s all;
+
+
+/* [============] Imports [============] */
+
+@import "general";
+@import "almanacs";
+@import "index";
