@@ -10,13 +10,18 @@
 {% block content %}
 <section id="latest-almanacs">
     <h2>Almanacs</h2>
-    {% for almanac in almanacs %}
-        <div class="almanac" id="{{ alamanc.slug }}">  
-            <div class="almanac-title-content">
-                <h3><a href="{{ almanac.get_absolute_url }}">{{ almanac.title }}</a></h3>
-                <p>{{ almanac.description }}</p>
+    
+    <section id="almanac-displays">
+        {% for almanac in almanacs %}
+
+            <div class="almanac" id="{{ almanac.slug }}">  
+                <div class="almanac-title-content">
+                    <h3><a href="{{ almanac.get_absolute_url }}">{{ almanac.title }}</a></h3>
+                    <p>{{ almanac.description }}</p>
+                </div>
             </div>
-        </div>
-    {% endfor %}    
+        
+        {% endfor %}    
+    </section>
 </section>
 {% endblock %}

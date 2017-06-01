@@ -4,10 +4,9 @@
 }
 
 header#index-header {
-    padding: 2em;
+    padding: 1em;
 
     h1 {
-        margin: 1em;
         text-align: center;
         
         a {
@@ -43,17 +42,21 @@ section#latest-almanacs {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    
+    section#almanac-displays {
+        // background: $secondary-color;
+    }
 
     .almanac {
         transform: rotate(-4deg);
-        background: linear-gradient(to top, white, $python-yellow);
-        padding: 4em 8em;
-        margin: 0 -4em;
+        background: linear-gradient(to top, white, $main-gray);
+        margin: 1em -4em;
+        padding: 8em 6em;
         width: calc(100vw + 8em);
 
         .almanac-title-content {
             transform: rotate(4deg);
-
+            padding: 4em;
             h3 {
                 padding: 0 0 1em 0;
                 a {
@@ -63,5 +66,13 @@ section#latest-almanacs {
                 }
             }            
         }
+
+        /*&:nth-child(even) {
+            transform: rotate(4deg);
+
+            .almanac-title-content {
+                transform: rotate(-4deg);
+            }
+        }*/
     }
 }

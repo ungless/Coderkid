@@ -8,6 +8,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $display-font;
 }
 
+h1 {
+    font-size: 5.9vw;
+}
+
+h2 {
+    font-size: 3.0vw;
+}
+
+p {
+    font-size: calc(2vmin * 75%);
+}
+
+
 a, p, ul, ol, body {
     font-family: $content-font;
 }

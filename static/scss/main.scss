@@ -5,6 +5,7 @@ $secondary-color: goldenrod;
 $main-gray: lightgray;
 
 $python-yellow: #FFD53B; 
+$go-blue: #73CDDC;
 
 $display-font: 'Kumar One', serif;
 $content-font: 'Roboto', sans-serif;
@@ -17,5 +18,5 @@ $transition: 0.3s all;
 @import url('https://fonts.googleapis.com/css?family=Kumar+One|Roboto');
 
 @import "general";
-@import "almanacs";
 @import "index";
+@import "almanacs";
