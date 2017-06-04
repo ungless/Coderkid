@@ -1,4 +1,6 @@
 {% extends "almanac/base.html" %}
+{% load markdown_deux_tags %}
+
 
 {% block title %}{{ post.title }} | {{ post.almanac.title }} - {% endblock %}
 
@@ -9,7 +11,7 @@
     </main>
 
     <article id="post-article">
-        <pre>{{ post.content }}</pre>
+        <pre>{{ post.content|markdown }}</pre>
     </article>
 
     <section id="post-examples">        

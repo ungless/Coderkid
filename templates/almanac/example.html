@@ -1,4 +1,9 @@
 {% extends "almanac/base.html" %}
+{% load static %}
+
+{% block header-js %}
+<link href="{% static 'css/prism.css' %}" rel="stylesheet" />
+{% endblock %}
 
 {% block title %}{{ example.name }} | {{ example.post.almanac.title }} - {% endblock %}
 
@@ -9,6 +14,8 @@
     </main>
 
     <section id="example-content">
-        <pre><code>{{ example.code }}</code></pre>
+        <pre><code class="language-{{ example.language }}">{{ example.code }}</code></pre>
     </section>
+
+    <script src="{% static 'js/prism.js' %}"></script>
 {% endblock %}

@@ -47,6 +47,7 @@ class Example(models.Model):
     code = models.TextField()
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     slug = models.SlugField(editable=False)
+    language = models.CharField(max_length=40)
 
     def __str__(self):
         return self.name
