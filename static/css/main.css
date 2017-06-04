@@ -36,6 +36,40 @@ a {
   a:focus {
     color: goldenrod; }
 
+.options-ul {
+  margin-left: 5em;
+  list-style: none; }
+  .options-ul li a {
+    padding: 1em 0.5em;
+    border-bottom: 1px solid lightgray;
+    font-size: 1.2rem;
+    width: 70vw;
+    display: block;
+    transition: 0.3s all; }
+    .options-ul li a:hover {
+      padding: 0.8em;
+      transform: translateX(1em);
+      text-decoration: none;
+      transition: 0.3s all;
+      box-shadow: 0 3px 0 lightgray; }
+    @media (max-width: 540px) {
+      .options-ul li a {
+        width: 90vw; }
+        .options-ul li a:hover {
+          transform: translateX(0); } }
+  @media (max-width: 540px) {
+    .options-ul {
+      margin: 0 5vw; } }
+
+main.main-header {
+  padding: 0.5em;
+  border-bottom: 1px solid lightgray;
+  margin: 1em 0.5em; }
+  main.main-header a {
+    text-align: left; }
+  main.main-header h2 {
+    text-align: center; }
+
 .wrapper {
   min-height: 100%;
   position: relative; }
@@ -143,33 +177,18 @@ section#almanac-posts {
     @media (max-width: 540px) {
       section#almanac-posts h3 {
         padding: 2em 0 0.5em 1em; } }
-  section#almanac-posts ul {
-    margin-left: 5em;
-    list-style: none; }
-    section#almanac-posts ul li a {
-      padding: 1em 0.5em;
-      border-bottom: 1px solid lightgray;
-      font-size: 1.2rem;
-      width: 70vw;
-      display: block;
-      transition: 0.3s all; }
-      section#almanac-posts ul li a:hover {
-        padding: 0.8em;
-        transform: translateX(1em);
-        text-decoration: none;
-        transition: 0.3s all;
-        box-shadow: 0 3px 0 lightgray; }
-      @media (max-width: 540px) {
-        section#almanac-posts ul li a {
-          width: 90vw; }
-          section#almanac-posts ul li a:hover {
-            transform: translateX(0); } }
-    @media (max-width: 540px) {
-      section#almanac-posts ul {
-        margin: 0 5vw; } }
-  @media (max-width: 540px) {
-    section#almanac-posts {
-      padding: 0;
-      margin: 0; } }
+
+article#post-article {
+  width: 60vw;
+  margin: 0 auto; }
+
+section#post-examples {
+  padding: 1em 0 0.5em 1em; }
+  section#post-examples ul, section#post-examples h4 {
+    padding-left: 2em; }
+
+section#example-content {
+  width: 60vw;
+  margin: 1em auto; }
 
 /*# sourceMappingURL=main.css.map */

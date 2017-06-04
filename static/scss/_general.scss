@@ -45,3 +45,54 @@ a {
         color: $secondary-color;
     }
 }
+
+.options-ul {
+    margin-left: 5em;
+    list-style: none;
+
+    li {
+        a {
+            padding: 1em 0.5em;
+            border-bottom: 1px solid $main-gray;
+            font-size: 1.2rem;
+            width: 70vw;
+            display: block;
+            transition: $transition;
+
+            &:hover {
+                padding: 0.8em;
+                transform: translateX(1em); 
+                text-decoration: none;
+                transition: $transition;
+                box-shadow: 0 3px 0 $main-gray;
+            }
+
+            @include mobile {
+                width: 90vw;
+
+                &:hover {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        margin: 0 5vw;
+    }
+}
+
+
+main.main-header {
+    padding: 0.5em;
+    border-bottom: 1px solid $main-gray;
+    margin: 1em 0.5em;
+
+    a {
+        text-align: left;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+}

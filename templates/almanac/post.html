@@ -3,25 +3,27 @@
 {% block title %}{{ post.title }} | {{ post.almanac.title }} - {% endblock %}
 
 {% block content %}
-    <main>
+    <main class="main-header" id="main-post">
         <a href="{% url 'almanac' post.almanac.slug %}">Back</a>
         <h2>{{ post.title }}</h2>
-        
-        <div class="post-content">
-            <p>
-                {{ post.content }}
-            </p>
-        </div>
-
-        <div class="post-examples">
-            <h3>Examples</h3>
-            <ul>
-                {% for example in examples %}
-                    <li>
-                        <a href="{{ example.get_absolute_url }}">{{ example.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
     </main>
+
+    <article id="post-article">
+        <pre>{{ post.content }}</pre>
+    </article>
+
+    <section id="post-examples">        
+        <h3>Examples</h3>
+        {% if examples %}
+        <ul class="options-ul">
+            {% for example in examples %}
+                <li>
+                    <a href="{{ example.get_absolute_url }}">{{ example.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <h4>No examples, you're alone, my friend.</h4>
+        {% endif %}
+    </section>
 {% endblock %}

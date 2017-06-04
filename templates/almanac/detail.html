@@ -14,7 +14,7 @@
 <section id="almanac-posts">
     <h3>What I have learned.</h3>
     {% if posts %}
-        <ul>
+        <ul class="options-ul">
             {% for post in posts %}
                 <li>
                     <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>

@@ -1,20 +1,14 @@
 {% extends "almanac/base.html" %}
 
-{% block title %}{{ example.title }} | {{ example.post.almanac.title }} - {% endblock %}
+{% block title %}{{ example.name }} | {{ example.post.almanac.title }} - {% endblock %}
 
 {% block content %}
-    <main>
+    <main class="main-header" id="main-example">
         <a href="{% url 'post' example.post.almanac.slug example.post.slug %}">Back</a>
         <h2>{{ example.name }}</h2>
-
-        <div class="example-content">
-            <p>
-                <pre>
-                    <code>
-                        {{ example.code }}
-                    </code>
-                </pre>
-            </p>
-        </div>
     </main>
+
+    <section id="example-content">
+        <pre><code>{{ example.code }}</code></pre>
+    </section>
 {% endblock %}

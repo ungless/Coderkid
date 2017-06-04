@@ -55,45 +55,4 @@ section#almanac-posts {
             padding: 2em 0 0.5em 1em;
         }
     }
-
-    ul {
-        margin-left: 5em;
-        list-style: none;
-
-        li {
-            a {
-                padding: 1em 0.5em;
-                border-bottom: 1px solid $main-gray;
-                font-size: 1.2rem;
-                width: 70vw;
-                display: block;
-                transition: $transition;
-    
-                &:hover {
-                    padding: 0.8em;
-                    transform: translateX(1em); 
-                    text-decoration: none;
-                    transition: $transition;
-                    box-shadow: 0 3px 0 $main-gray;
-                }
-    
-                @include mobile {
-                    width: 90vw;
-
-                    &:hover {
-                        transform: translateX(0);
-                    }
-                }
-            }
-        }
-
-        @include mobile {
-            margin: 0 5vw;
-        }
-    }
-
-    @include mobile {
-        padding: 0;
-        margin: 0;
-    }
 }
