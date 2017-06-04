@@ -1,6 +1,6 @@
-.container {
-    position: relative;
+.wrapper {
     min-height: 100%;
+    position: relative;
 }
 
 header#index-header {
@@ -8,31 +8,30 @@ header#index-header {
     margin: 0 auto;
     width: 85vw;
 
-
     h1 {
         text-align: center;
         
         a {
             color: black;
             font: 40px 'Kumar One';
+            
+            &:hover {
+                color: $main-color;
+            }
         }
     }
 }
 
 main#index-content {
-    padding: 0.5em;
-    padding-bottom: 7em;
+    padding: 0;
+    min-height: calc(100vh - 6em);
 }
 
 footer#index-footer {
     background: darken($main-gray, 50%);
-    margin: 0px;
-    position: absolute;
-    bottom: 0;
-    padding: 1em;
-    left: 0;
-    width: 100%;
+    margin: 0;
     height: 3em;
+    padding: 0.5em;
     text-align: right;
 
     a {
@@ -70,18 +69,6 @@ section#latest-almanacs {
             margin: 0 auto;
             padding: 2em 0;
             width: 80vw;
-            
-            img {
-                width: 10vw;
-                display: inline;
-                border-radius: 5px;
-                padding: 1em;
-                background: rgba(255, 255, 255, 0.7);
-                
-                @include desktop {
-                    width: 7vw;
-                }
-            }
 
             a {
                 color: white;

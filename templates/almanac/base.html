@@ -8,7 +8,7 @@
     {% block header-js %}{% endblock %}
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <header id="index-header">
             <h1><a href="{% url 'index' %}">Coderkid</a></h1>
             {% block index-header %}
@@ -21,9 +21,10 @@
             {% endblock %}
         </main>
 
-        <footer id="index-footer">
-            <a href="http://maxungless.com">Created by Max Ungless</a>
-        </footer>
+       
     </div>
+    <footer id="index-footer">
+        <a href="http://maxungless.com">Created by Max Ungless</a>
+    </footer>
 </body>
 </html>

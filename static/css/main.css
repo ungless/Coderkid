@@ -3,8 +3,8 @@
 /* [============] Imports [============] */
 @import url("https://fonts.googleapis.com/css?family=Kumar+One|Roboto");
 * {
-  padding: 0em;
-  margin: 0em;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,16 +29,16 @@ a, p, ul, ol, body {
   font-family: "Roboto", sans-serif; }
 
 a {
-  color: red;
+  color: #FE4A49;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
   a:focus {
     color: goldenrod; }
 
-.container {
-  position: relative;
-  min-height: 100%; }
+.wrapper {
+  min-height: 100%;
+  position: relative; }
 
 header#index-header {
   padding: 1em;
@@ -49,20 +49,18 @@ header#index-header {
     header#index-header h1 a {
       color: black;
       font: 40px 'Kumar One'; }
+      header#index-header h1 a:hover {
+        color: #FE4A49; }
 
 main#index-content {
-  padding: 0.5em;
-  padding-bottom: 7em; }
+  padding: 0;
+  min-height: calc(100vh - 6em); }
 
 footer#index-footer {
   background: #545454;
-  margin: 0px;
-  position: absolute;
-  bottom: 0;
-  padding: 1em;
-  left: 0;
-  width: 100%;
+  margin: 0;
   height: 3em;
+  padding: 0.5em;
   text-align: right; }
   footer#index-footer a {
     color: white;
@@ -96,15 +94,6 @@ section#latest-almanacs {
       margin: 0 auto;
       padding: 2em 0;
       width: 80vw; }
-      section#latest-almanacs .almanac .almanac-title-content img {
-        width: 10vw;
-        display: inline;
-        border-radius: 5px;
-        padding: 1em;
-        background: rgba(255, 255, 255, 0.7); }
-        @media (min-width: 1024px) {
-          section#latest-almanacs .almanac .almanac-title-content img {
-            width: 7vw; } }
       section#latest-almanacs .almanac .almanac-title-content a {
         color: white;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
@@ -114,10 +103,73 @@ section#latest-almanacs {
         display: inline;
         padding: 0 0 1em 0; }
 
-.almanac#python {
-  background: linear-gradient(to top left, #ffeba1, #FFD53B) !important; }
+.almanac-python {
+  background: linear-gradient(to top left, #ffeba1, #FFD53B) !important;
+  background: red; }
 
-.almanac#go {
+.almanac-go {
   background: linear-gradient(to top left, #c5eaf0, #73CDDC) !important; }
+
+img.almanac-logo {
+  width: 10vw;
+  display: inline;
+  border-radius: 5px;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.7); }
+  @media (max-width: 540px) {
+    img.almanac-logo {
+      width: 15vw;
+      padding: 0.4em; } }
+  @media (min-width: 1024px) {
+    img.almanac-logo {
+      width: 7vw; } }
+
+main#main-almanac {
+  width: 100%;
+  padding: 2em;
+  text-align: center; }
+  main#main-almanac h2 {
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    display: inline;
+    margin: 1em 0.5em;
+    font-size: 2rem; }
+
+section#almanac-posts {
+  padding: 2em;
+  margin: 2em; }
+  section#almanac-posts h3 {
+    font-size: 1.7rem; }
+    @media (max-width: 540px) {
+      section#almanac-posts h3 {
+        padding: 2em 0 0.5em 1em; } }
+  section#almanac-posts ul {
+    margin-left: 5em;
+    list-style: none; }
+    section#almanac-posts ul li a {
+      padding: 1em 0.5em;
+      border-bottom: 1px solid lightgray;
+      font-size: 1.2rem;
+      width: 70vw;
+      display: block;
+      transition: 0.3s all; }
+      section#almanac-posts ul li a:hover {
+        padding: 0.8em;
+        transform: translateX(1em);
+        text-decoration: none;
+        transition: 0.3s all;
+        box-shadow: 0 3px 0 lightgray; }
+      @media (max-width: 540px) {
+        section#almanac-posts ul li a {
+          width: 90vw; }
+          section#almanac-posts ul li a:hover {
+            transform: translateX(0); } }
+    @media (max-width: 540px) {
+      section#almanac-posts ul {
+        margin: 0 5vw; } }
+  @media (max-width: 540px) {
+    section#almanac-posts {
+      padding: 0;
+      margin: 0; } }
 
 /*# sourceMappingURL=main.css.map */

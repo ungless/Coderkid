@@ -14,10 +14,10 @@
     <section id="almanac-displays">
         {% for almanac in almanacs %}
 
-            <div class="almanac" id="{{ almanac.slug }}">  
+            <div class="almanac almanac-{{ almanac.slug }}">  
                 <div class="almanac-title-content">
                     <a href="{{ almanac.get_absolute_url }}">
-                        <img src="{% static 'img/' %}{{ almanac.slug }}.png" alt="{{ almanac.slug }} logo">
+                        <img class="almanac-logo" src="{% static 'img/' %}{{ almanac.slug }}.png" alt="{{ almanac.slug }} logo">
                         <h3>{{ almanac.title }}</h3>
                     </a>
                     <p>{{ almanac.description }}</p>

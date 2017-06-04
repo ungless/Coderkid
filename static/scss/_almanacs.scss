@@ -1,7 +1,99 @@
-.almanac#python {
+.almanac-python {
     @include almanac-gradient($python-yellow);
+    background: red;
 }
 
-.almanac#go {
+.almanac-go {
     @include almanac-gradient($go-blue);
+}
+
+img.almanac-logo {
+    width: 10vw;
+    display: inline;
+    border-radius: 5px;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.7);
+    
+    @include mobile {
+        width: 15vw;
+        padding: 0.4em;
+    }
+
+    @include desktop {
+        width: 7vw;
+    }
+}
+
+
+
+main#main-almanac {
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+    
+    h2 {
+        color: white;
+        text-shadow: 1px 1px rgba(0,0,0,0.2);        
+        display: inline;
+        margin: 1em 0.5em;
+        font-size: 2rem;
+    }
+
+    p {
+
+    }
+}
+
+section#almanac-posts {
+    padding: 2em;
+    margin: 2em;
+
+    h3 {
+        font-size: 1.7rem;
+    
+        @include mobile {
+            padding: 2em 0 0.5em 1em;
+        }
+    }
+
+    ul {
+        margin-left: 5em;
+        list-style: none;
+
+        li {
+            a {
+                padding: 1em 0.5em;
+                border-bottom: 1px solid $main-gray;
+                font-size: 1.2rem;
+                width: 70vw;
+                display: block;
+                transition: $transition;
+    
+                &:hover {
+                    padding: 0.8em;
+                    transform: translateX(1em); 
+                    text-decoration: none;
+                    transition: $transition;
+                    box-shadow: 0 3px 0 $main-gray;
+                }
+    
+                @include mobile {
+                    width: 90vw;
+
+                    &:hover {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+
+        @include mobile {
+            margin: 0 5vw;
+        }
+    }
+
+    @include mobile {
+        padding: 0;
+        margin: 0;
+    }
 }
