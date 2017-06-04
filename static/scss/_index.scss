@@ -5,6 +5,9 @@
 
 header#index-header {
     padding: 1em;
+    margin: 0 auto;
+    width: 85vw;
+
 
     h1 {
         text-align: center;
@@ -48,19 +51,33 @@ section#latest-almanacs {
     }
 
     .almanac {
-        transform: rotate(-4deg);
-        background: linear-gradient(to top, white, $main-gray);
+        transform: rotate(-2deg);
+        background: linear-gradient(to top right, white, $main-gray);
         margin: 1em -4em;
-        padding: 8em 6em;
+        padding: 6em 4em;
         width: calc(100vw + 8em);
+        
+        @include mobile {
+            padding: 3em 2em;
+        }
+
+        @include desktop {
+            font-size: 1.5rem;
+        }
 
         .almanac-title-content {
-            transform: rotate(4deg);
-            padding: 4em;
+            transform: rotate(2deg);
+            margin: 0 auto;
+            padding: 2em 0;
+            width: 80vw;
+
             h3 {
                 padding: 0 0 1em 0;
+                
                 a {
-                    font-size: 35px;
+                    font-family: $display-font;
+                    font-size: 2.5rem;
+                        
                     color: white;
                     text-shadow: 1px 1px rgba(0,0,0,0.2);
                 }

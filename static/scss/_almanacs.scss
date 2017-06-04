@@ -1,7 +1,7 @@
 .almanac#python {
-    background: linear-gradient(to bottom left, lighten($python-yellow, 20%), $python-yellow) !important;
+    @include almanac-gradient($python-yellow);
 }
 
 .almanac#go {
-    background: linear-gradient(to bottom left, lighten($go-blue, 20%), $go-blue) !important;
+    @include almanac-gradient($go-blue);
 }

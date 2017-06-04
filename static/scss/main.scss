@@ -12,6 +12,36 @@ $content-font: 'Roboto', sans-serif;
 
 $transition: 0.3s all;
 
+$bp-mobile: 540px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-widescreen: 1920px;
+
+
+/* [============] Mixins [============] */
+
+@mixin mobile {
+   @media (max-width: #{$bp-mobile}){
+    @content;
+  }
+}
+
+@mixin tablet {
+   @media (min-width: #{$bp-tablet}) and (max-width: #{$bp-desktop - 1px}){
+    @content;
+  }
+}
+
+@mixin desktop {
+   @media (min-width: #{$bp-desktop}){
+    @content;
+  }
+}
+
+@mixin almanac-gradient($color) {
+    background: linear-gradient(to top left, lighten($color, 20%), $color) !important;
+}
+
 
 /* [============] Imports [============] */
 

@@ -1,7 +1,7 @@
 {% extends "almanac/base.html" %}
+{% load static %}
 
 {% block index-header %}
-<main>
     <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quod aut ut voluptatibus harum magni, illo nesciunt voluptates sint sed sequi nostrum animi, deserunt odio voluptatum, placeat molestiae dignissimos, quam.</span>
     <span>Voluptate alias corrupti error asperiores eos tempore, facere est culpa nobis recusandae officiis, cum ullam. Sapiente quasi labore voluptate, ipsum reiciendis dolor impedit, eveniet laboriosam voluptas ullam, id obcaecati et.</span>
     <span>Voluptatem suscipit dolore, quaerat. Reprehenderit delectus a dolorem similique cupiditate praesentium eveniet nisi. A recusandae odio modi obcaecati quas eius, soluta voluptatum ullam magnam vero? Eum unde id, eaque dolorem.</span></p>
@@ -16,6 +16,7 @@
 
             <div class="almanac" id="{{ almanac.slug }}">  
                 <div class="almanac-title-content">
+                    <img src="{% static 'img/{{ almanac.slug }}.png' %}" alt="{{ almanac.slug }} logo">
                     <h3><a href="{{ almanac.get_absolute_url }}">{{ almanac.title }}</a></h3>
                     <p>{{ almanac.description }}</p>
                 </div>

@@ -1,4 +1,5 @@
 /* [============] Variables [============] */
+/* [============] Mixins [============] */
 /* [============] Imports [============] */
 @import url("https://fonts.googleapis.com/css?family=Kumar+One|Roboto");
 * {
@@ -14,6 +15,12 @@ h1 {
 
 h2 {
   font-size: 3.0vw; }
+  @media (max-width: 540px) {
+    h2 {
+      font-size: 8vw; } }
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2vw; } }
 
 p {
   font-size: calc(2vmin * 75%); }
@@ -34,7 +41,9 @@ a {
   min-height: 100%; }
 
 header#index-header {
-  padding: 1em; }
+  padding: 1em;
+  margin: 0 auto;
+  width: 85vw; }
   header#index-header h1 {
     text-align: center; }
     header#index-header h1 a {
@@ -64,10 +73,10 @@ section#latest-almanacs {
   margin: 0;
   padding: 0; }
   section#latest-almanacs .almanac {
-    transform: rotate(-4deg);
-    background: linear-gradient(to top, white, lightgray);
+    transform: rotate(-2deg);
+    background: linear-gradient(to top right, white, lightgray);
     margin: 1em -4em;
-    padding: 8em 6em;
+    padding: 6em 4em;
     width: calc(100vw + 8em);
         /*&:nth-child(even) {
             transform: rotate(4deg);
@@ -76,20 +85,29 @@ section#latest-almanacs {
                 transform: rotate(-4deg);
             }
         }*/ }
+    @media (max-width: 540px) {
+      section#latest-almanacs .almanac {
+        padding: 3em 2em; } }
+    @media (min-width: 1024px) {
+      section#latest-almanacs .almanac {
+        font-size: 1.5rem; } }
     section#latest-almanacs .almanac .almanac-title-content {
-      transform: rotate(4deg);
-      padding: 4em; }
+      transform: rotate(2deg);
+      margin: 0 auto;
+      padding: 2em 0;
+      width: 80vw; }
       section#latest-almanacs .almanac .almanac-title-content h3 {
         padding: 0 0 1em 0; }
         section#latest-almanacs .almanac .almanac-title-content h3 a {
-          font-size: 35px;
+          font-family: "Kumar One", serif;
+          font-size: 2.5rem;
           color: white;
           text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
 
 .almanac#python {
-  background: linear-gradient(to bottom left, #ffeba1, #FFD53B) !important; }
+  background: linear-gradient(to top left, #ffeba1, #FFD53B) !important; }
 
 .almanac#go {
-  background: linear-gradient(to bottom left, #c5eaf0, #73CDDC) !important; }
+  background: linear-gradient(to top left, #c5eaf0, #73CDDC) !important; }
 
 /*# sourceMappingURL=main.css.map */

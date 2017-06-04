@@ -14,6 +14,14 @@ h1 {
 
 h2 {
     font-size: 3.0vw;
+
+    @include mobile {
+        font-size: 8vw;
+    }
+
+    @include desktop {
+        font-size: 2vw;
+    }
 }
 
 p {
