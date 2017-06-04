@@ -70,17 +70,29 @@ section#latest-almanacs {
             margin: 0 auto;
             padding: 2em 0;
             width: 80vw;
+            
+            img {
+                width: 10vw;
+                display: inline;
+                border-radius: 5px;
+                padding: 1em;
+                background: rgba(255, 255, 255, 0.7);
+                
+                @include desktop {
+                    width: 7vw;
+                }
+            }
+
+            a {
+                color: white;
+                text-shadow: 1px 1px rgba(0,0,0,0.2);
+            }
 
             h3 {
-                padding: 0 0 1em 0;
-                
-                a {
-                    font-family: $display-font;
-                    font-size: 2.5rem;
-                        
-                    color: white;
-                    text-shadow: 1px 1px rgba(0,0,0,0.2);
-                }
+                font-family: $display-font;
+                font-size: 2.5rem;
+                display: inline;
+                padding: 0 0 1em 0;   
             }            
         }
 
