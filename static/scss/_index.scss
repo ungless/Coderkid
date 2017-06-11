@@ -6,7 +6,18 @@
 header#index-header {
     padding: 1em;
     margin: 0 auto;
-    width: 85vw;
+    width: 60em;
+
+    @include mobile {
+        width: 95%;
+    }
+    @include tablet {
+        width: 90%;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
 
     h1 {
         text-align: center;
@@ -45,6 +56,10 @@ section#latest-almanacs {
     margin: 0;
     padding: 0;
     
+    h2 {
+        padding: 1em 0 0 1em;
+    }
+
     section#almanac-displays {
         // background: $secondary-color;
     }

@@ -60,11 +60,10 @@ a {
             transition: $transition;
 
             &:hover {
-                padding: 0.8em;
-                transform: translateX(1em); 
+                transform: translateX(2em); 
                 text-decoration: none;
                 transition: $transition;
-                box-shadow: 0 3px 0 $main-gray;
+                box-shadow: 1px 1px 0 $main-gray;
             }
 
             @include mobile {

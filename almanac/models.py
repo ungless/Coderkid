@@ -23,7 +23,7 @@ class Almanac(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=40, unique=True)
+    title = models.CharField(max_length=40)
     content = models.TextField()
     slug = models.SlugField(editable=False)
     submitted = models.DateField(default=timezone.now)

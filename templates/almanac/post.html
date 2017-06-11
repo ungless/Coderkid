@@ -1,6 +1,10 @@
 {% extends "almanac/base.html" %}
-{% load markdown_deux_tags %}
+{% load markdown_filter %}
+{% load static %}
 
+{% block header-js %}
+<link href="{% static 'css/prism.css' %}" rel="stylesheet" />
+{% endblock %}
 
 {% block title %}{{ post.title }} | {{ post.almanac.title }} - {% endblock %}
 
@@ -11,7 +15,7 @@
     </main>
 
     <article id="post-article">
-        <pre>{{ post.content|markdown }}</pre>
+        <pre>{{ post.content|parse_md|safe }}</pre>
     </article>
 
     <section id="post-examples">        
@@ -28,4 +32,5 @@
             <h4>No examples, you're alone, my friend.</h4>
         {% endif %}
     </section>
+    <script src="{% static 'js/prism.js' %}"></script>
 {% endblock %}
