@@ -14,8 +14,12 @@
     </main>
 
     <section id="example-content">
+        <h3>Code:</h3>
         <pre><code class="language-{{ example.language }}">{{ example.code }}</code></pre>
+        <h3>Output:</h3>
+        <pre><code class="language-bash">$ {{ example.output }}</code></pre>
     </section>
+    
 
     <script src="{% static 'js/prism.js' %}"></script>
 {% endblock %}

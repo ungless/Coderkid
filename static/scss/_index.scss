@@ -16,7 +16,11 @@ header#index-header {
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+
+        @include mobile {
+            font-size: 0.9rem;
+        }
     }
 
     h1 {
@@ -24,8 +28,12 @@ header#index-header {
         
         a {
             color: black;
-            font: 40px 'Kumar One';
-            
+            font: 4vw 'Kumar One';
+
+            @include mobile {
+                font-size: 9vw; 
+            }
+
             &:hover {
                 color: $main-color;
             }
@@ -88,6 +96,14 @@ section#latest-almanacs {
             a {
                 color: white;
                 text-shadow: 1px 1px rgba(0,0,0,0.2);
+                
+                &:hover {
+                    text-decoration: unerline;
+
+                    img {
+                        text-decoration: none;
+                    }
+                }
             }
 
             h3 {

@@ -1,4 +1,8 @@
 section#example-content {
     width: 60vw;
     margin: 1em auto;
+    
+    @include mobile {
+        width: 90vw;
+    }
 }

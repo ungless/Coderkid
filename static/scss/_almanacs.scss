@@ -22,6 +22,10 @@ img.almanac-logo {
     @include desktop {
         width: 7vw;
     }
+
+    &:hover {
+        text-decoration: none; 
+    }
 }
 
 
@@ -38,15 +42,16 @@ main#main-almanac {
         margin: 1em 0.5em;
         font-size: 2rem;
     }
-
-    p {
-
-    }
 }
 
 section#almanac-posts {
     padding: 2em;
     margin: 2em;
+    
+    @include mobile {
+        padding: 0;
+        margin: 0;
+    }
 
     h3 {
         font-size: 1.7rem;

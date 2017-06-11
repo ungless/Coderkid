@@ -17,13 +17,13 @@ h2 {
   font-size: 3.0vw; }
   @media (max-width: 540px) {
     h2 {
-      font-size: 8vw; } }
+      font-size: 5vw; } }
   @media (min-width: 1024px) {
     h2 {
       font-size: 2vw; } }
 
 p {
-  font-size: calc(2vmin * 75%); }
+  font-size: calc(2vmin * 25%); }
 
 a, p, ul, ol, body {
   font-family: "Roboto", sans-serif; }
@@ -58,7 +58,8 @@ a {
           transform: translateX(0); } }
   @media (max-width: 540px) {
     .options-ul {
-      margin: 0 5vw; } }
+      margin: 0 5vw;
+      width: 90vw; } }
 
 main.main-header {
   padding: 0.5em;
@@ -84,12 +85,18 @@ header#index-header {
     header#index-header {
       width: 90%; } }
   header#index-header p {
-    font-size: 1.2rem; }
+    font-size: 1.1rem; }
+    @media (max-width: 540px) {
+      header#index-header p {
+        font-size: 0.9rem; } }
   header#index-header h1 {
     text-align: center; }
     header#index-header h1 a {
       color: black;
-      font: 40px 'Kumar One'; }
+      font: 4vw 'Kumar One'; }
+      @media (max-width: 540px) {
+        header#index-header h1 a {
+          font-size: 9vw; } }
       header#index-header h1 a:hover {
         color: #FE4A49; }
 
@@ -140,6 +147,10 @@ section#latest-almanacs {
       section#latest-almanacs .almanac .almanac-title-content a {
         color: white;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+        section#latest-almanacs .almanac .almanac-title-content a:hover {
+          text-decoration: unerline; }
+          section#latest-almanacs .almanac .almanac-title-content a:hover img {
+            text-decoration: none; }
       section#latest-almanacs .almanac .almanac-title-content h3 {
         font-family: "Kumar One", serif;
         font-size: 2.5rem;
@@ -166,6 +177,8 @@ img.almanac-logo {
   @media (min-width: 1024px) {
     img.almanac-logo {
       width: 7vw; } }
+  img.almanac-logo:hover {
+    text-decoration: none; }
 
 main#main-almanac {
   width: 100%;
@@ -181,6 +194,10 @@ main#main-almanac {
 section#almanac-posts {
   padding: 2em;
   margin: 2em; }
+  @media (max-width: 540px) {
+    section#almanac-posts {
+      padding: 0;
+      margin: 0; } }
   section#almanac-posts h3 {
     font-size: 1.7rem; }
     @media (max-width: 540px) {
@@ -190,14 +207,26 @@ section#almanac-posts {
 article#post-article {
   width: 60vw;
   margin: 0 auto; }
+  @media (max-width: 540px) {
+    article#post-article {
+      width: 80vw; } }
 
 section#post-examples {
-  padding: 1em 0 0.5em 1em; }
-  section#post-examples ul, section#post-examples h4 {
-    padding-left: 2em; }
+  padding: 2em;
+  margin: 2em; }
+  @media (max-width: 540px) {
+    section#post-examples {
+      padding: 0;
+      margin: 0; } }
+  @media (max-width: 540px) {
+    section#post-examples h3 {
+      padding: 2em 0 0.5em 1em; } }
 
 section#example-content {
   width: 60vw;
   margin: 1em auto; }
+  @media (max-width: 540px) {
+    section#example-content {
+      width: 90vw; } }
 
 /*# sourceMappingURL=main.css.map */

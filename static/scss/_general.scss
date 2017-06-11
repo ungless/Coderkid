@@ -16,7 +16,7 @@ h2 {
     font-size: 3.0vw;
 
     @include mobile {
-        font-size: 8vw;
+        font-size: 5vw;
     }
 
     @include desktop {
@@ -25,7 +25,7 @@ h2 {
 }
 
 p {
-    font-size: calc(2vmin * 75%);
+    font-size: calc(2vmin * 25%);
 }
 
 
@@ -78,6 +78,7 @@ a {
 
     @include mobile {
         margin: 0 5vw;
+        width: 90vw;
     }
 }
 
