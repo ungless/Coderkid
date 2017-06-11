@@ -35,6 +35,7 @@ main#main-almanac {
     width: 100%;
     padding: 2em;
     text-align: center;
+
     
     h2 {
         color: white;
@@ -51,7 +52,7 @@ section#almanac-posts {
     
     @include mobile {
         padding: 0;
-        margin: 0;
+        margin: 0 0 2em 0;
     }
 
     h3 {

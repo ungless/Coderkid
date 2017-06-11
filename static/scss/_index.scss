@@ -71,12 +71,26 @@ section#latest-almanacs {
     section#almanac-displays {
         // background: $secondary-color;
     }
+    
+    .new-almanac {
+        background: linear-gradient(to top right, darken($main-color, 30%), $main-color);
+        color: white;
+        position: absolute;
+        top: 0;
+        width: calc(100vw + 8em);
+
+        h3 {
+            padding: 0.5em 2.5em;
+            margin: auto 0;
+            font-size: 1.2rem;
+        }
+    }
 
     .almanac {
         transform: rotate(-2deg);
         background: linear-gradient(to top right, white, $main-gray);
-        margin: 1em -4em;
-        padding: 6em 4em;
+        margin: 0 -4em 1em -4em;
+        padding: 4em 4em;
         width: calc(100vw + 8em);
         
         @include mobile {

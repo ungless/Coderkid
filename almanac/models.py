@@ -30,7 +30,7 @@ class Post(models.Model):
     almanac = models.ForeignKey(Almanac, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.title
+        return self.title + " (%s)" % self.almanac 
 
     def get_absolute_url(self):
         return reverse("post", kwargs={"almanac_slug": self.almanac.slug, "post_slug": self.slug})
@@ -51,7 +51,7 @@ class Example(models.Model):
     language = models.CharField(max_length=40)
 
     def __str__(self):
-        return self.name
+        return self.name + " - %s" % self.post 
 
     def get_absolute_url(self):
         return reverse("example", kwargs={"almanac_slug": self.post.almanac.slug, "post_slug": self.post.slug, "example_slug": self.slug})

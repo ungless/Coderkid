@@ -10,12 +10,14 @@
 
 {% block content %}
     <main class="main-header" id="main-post">
-        <a href="{% url 'almanac' post.almanac.slug %}">Back</a>
+        <div>
+            <a href="{% url 'almanac' post.almanac.slug %}">Back</a>
+        </div>
         <h2>{{ post.title }}</h2>
     </main>
 
     <article id="post-article">
-        <pre>{{ post.content|parse_md|safe }}</pre>
+        {{ post.content|parse_md|safe }}
     </article>
 
     <section id="post-examples">        

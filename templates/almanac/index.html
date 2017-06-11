@@ -11,8 +11,14 @@
     
     <section id="almanac-displays">
         {% for almanac in almanacs %}
-
+            
+         
             <div class="almanac almanac-{{ almanac.slug }}">  
+                {% if almanac.slug in new %}
+                <div class="new-almanac">
+                    <h3>NEW!</h3>
+                </div>
+                {% endif %}
                 <div class="almanac-title-content">
                     <a href="{{ almanac.get_absolute_url }}">
                         <img class="almanac-logo" src="{% static 'img/' %}{{ almanac.slug }}.png" alt="{{ almanac.slug }} logo">
@@ -21,7 +27,6 @@
                     <p>{{ almanac.description }}</p>
                 </div>
             </div>
-        
         {% endfor %}    
     </section>
 </section>

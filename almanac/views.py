@@ -1,11 +1,27 @@
+import datetime
+
 from django.shortcuts import render
 from django.views import generic
+from django.utils import timezone
+
 from . import models
+
 
 class IndexView(generic.ListView):
     template_name = "almanac/index.html"
     context_object_name = "almanacs"
     queryset = models.Almanac.objects.all().order_by("-created")
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        margin = datetime.timedelta(days=7)
+        new = []
+        for almanac in self.queryset:
+            if datetime.datetime.today().date() - margin <= almanac.created + margin:
+                new.append(almanac.slug)
+
+        context["new"] = new
+        return context
 
 
 class AlmanacView(generic.DetailView):

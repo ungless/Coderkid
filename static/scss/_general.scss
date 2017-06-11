@@ -87,9 +87,13 @@ main.main-header {
     padding: 0.5em;
     border-bottom: 1px solid $main-gray;
     margin: 1em 0.5em;
-
-    a {
+    
+    div {
         text-align: left;
+        
+        @include mobile {
+            text-align: right;
+        }
     }
     
     h2 {

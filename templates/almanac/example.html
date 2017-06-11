@@ -9,7 +9,9 @@
 
 {% block content %}
     <main class="main-header" id="main-example">
-        <a href="{% url 'post' example.post.almanac.slug example.post.slug %}">Back</a>
+        <div>
+            <a href="{% url 'post' example.post.almanac.slug example.post.slug %}">Back</a>
+        </div>
         <h2>{{ example.name }} | {{ example.post.almanac.title }}</h2>
     </main>
 
