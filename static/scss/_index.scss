@@ -98,10 +98,10 @@ section#latest-almanacs {
                 text-shadow: 1px 1px rgba(0,0,0,0.2);
                 
                 &:hover {
-                    text-decoration: unerline;
+                    text-decoration: none;
 
-                    img {
-                        text-decoration: none;
+                    h3 {
+                        text-decoration: underline;
                     }
                 }
             }

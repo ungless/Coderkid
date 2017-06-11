@@ -148,9 +148,9 @@ section#latest-almanacs {
         color: white;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
         section#latest-almanacs .almanac .almanac-title-content a:hover {
-          text-decoration: unerline; }
-          section#latest-almanacs .almanac .almanac-title-content a:hover img {
-            text-decoration: none; }
+          text-decoration: none; }
+          section#latest-almanacs .almanac .almanac-title-content a:hover h3 {
+            text-decoration: underline; }
       section#latest-almanacs .almanac .almanac-title-content h3 {
         font-family: "Kumar One", serif;
         font-size: 2.5rem;
@@ -169,6 +169,7 @@ img.almanac-logo {
   display: inline;
   border-radius: 5px;
   padding: 1em;
+  text-decoration: none !important;
   background: rgba(255, 255, 255, 0.7); }
   @media (max-width: 540px) {
     img.almanac-logo {
@@ -221,6 +222,12 @@ section#post-examples {
   @media (max-width: 540px) {
     section#post-examples h3 {
       padding: 2em 0 0.5em 1em; } }
+  section#post-examples p {
+    margin-left: 2em; }
+    @media (max-width: 540px) {
+      section#post-examples p {
+        margin: 0 auto;
+        width: 90vw; } }
 
 section#example-content {
   width: 60vw;
