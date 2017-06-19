@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
-from django.shortcuts import reverse
+from django.core.urlresolvers import reverse
 
 class Almanac(models.Model):
     title = models.CharField(max_length=40, unique=True)
