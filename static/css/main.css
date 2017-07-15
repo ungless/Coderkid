@@ -8,6 +8,7 @@
   box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
+  padding: 0.5rem;
   font-family: "Kumar One", serif; }
 
 h1 {
@@ -23,10 +24,15 @@ h2 {
       font-size: 2vw; } }
 
 p {
+  padding: 1em;
+  line-height: 1.5em;
   font-size: calc(2vmin * 25%); }
 
 a, p, ul, ol, body {
   font-family: "Roboto", sans-serif; }
+
+ul, ol {
+  margin-left: 3em; }
 
 a {
   color: #FE4A49;
@@ -78,7 +84,7 @@ main.main-header {
   position: relative; }
 
 header#index-header {
-  padding: 1em;
+  padding: 0.5em;
   margin: 0 auto;
   width: 60em; }
   @media (max-width: 540px) {
@@ -93,10 +99,11 @@ header#index-header {
       header#index-header p {
         font-size: 0.9rem; } }
   header#index-header h1 {
+    font-size: 0;
     text-align: center; }
     header#index-header h1 a {
       color: black;
-      font: 4vw 'Kumar One'; }
+      font: 3vw 'Kumar One'; }
       @media (max-width: 540px) {
         header#index-header h1 a {
           font-size: 9vw; } }
@@ -224,6 +231,9 @@ article#post-article {
   @media (max-width: 540px) {
     article#post-article {
       width: 80vw; } }
+  article#post-article p {
+    padding: 0.2em;
+    margin-bottom: 0.5em; }
 
 section#post-examples {
   padding: 2em;
@@ -241,6 +251,12 @@ section#post-examples {
       section#post-examples p {
         margin: 0 auto;
         width: 90vw; } }
+
+code {
+  background: lightgray;
+  padding: 0.3em;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+  border-radius: 5px; }
 
 section#example-content {
   width: 60vw;

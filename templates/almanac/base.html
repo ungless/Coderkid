@@ -3,8 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Max Ungless">
+    <meta name="keywords" content="coderkid, coding tutorials, almanacs">
+    <meta name="description" content="Max Ungless' collection of almanacs - guides on programming, software design and generally what I have learned. Learning is key to success in programming.">
+    <meta name="subject" content="programming">
+    <!-- <meta name="theme-color" content="#FE4A49"> -->
     <title>{% block title %}{% endblock %}Coderkid</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block header-js %}{% endblock %}
 </head>
@@ -22,7 +28,6 @@
             {% endblock %}
         </main>
 
-       
     </div>
     <footer id="index-footer">
         <a href="http://maxungless.com">Created by Max Ungless</a>

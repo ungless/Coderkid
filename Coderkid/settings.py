@@ -18,6 +18,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [STATIC_DIR, ]
 
+ALMANAC_DIR = os.path.join(BASE_DIR, 'almanac_data')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -27,7 +28,7 @@ SECRET_KEY = '-r$=ro*&-#aul*mc%u6iixv8qx+of2yac96l*6sfb86di)!n$_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.1.166"]
+ALLOWED_HOSTS = []
 
 
 # Application definition

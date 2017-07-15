@@ -1,9 +1,14 @@
 article#post-article {
     width: 60vw;
     margin: 0 auto;
-
+    
     @include mobile {
         width: 80vw;
+    }
+
+    p {
+        padding: 0.2em;
+        margin-bottom: 0.5em;
     }
 }
 
@@ -30,4 +35,11 @@ section#post-examples {
             width: 90vw;
         }
     }
+}
+
+code {
+    background: $main-gray;
+    padding: 0.3em;
+    text-shadow: 1px 1px rgba(255,255,255,0.3);
+    border-radius: 5px;
 }

@@ -1,3 +1,6 @@
+import os
+
+from Coderkid.settings import ALMANAC_DIR
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
@@ -18,16 +21,19 @@ class Almanac(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             self.slug = slugify(self.title)
+            if not os.path.exists(ALMANAC_DIR + "/%s" % self.slug):
+                os.makedirs(ALMANAC_DIR + "/%s" % self.slug)
 
         return super(Almanac, self).save(*args, **kwargs)
 
 
 class Post(models.Model):
     title = models.CharField(max_length=40)
-    content = models.TextField()
+    content = models.TextField(blank=True, null=True)
     slug = models.SlugField(editable=False)
     submitted = models.DateField(default=timezone.now)
     almanac = models.ForeignKey(Almanac, on_delete=models.CASCADE)
+    from_file = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title + " (%s)" % self.almanac 
@@ -38,6 +44,18 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             self.slug = slugify(self.title)
+        file = open(ALMANAC_DIR + "/%s/%s.md" % (self.almanac.slug, self.slug), "w+")
+        data = file.read().replace('\n', '\n')
+
+        if not self.pk:
+            if self.from_file:
+                print(file)   
+                self.content = data
+                     
+        print(self.content)
+        if self.content != data:
+            file.write(str(self.content))
+        file.close()
 
         return super(Post, self).save(*args, **kwargs)
 
