@@ -23,6 +23,7 @@ class Almanac(models.Model):
             self.slug = slugify(self.title)
             if not os.path.exists(ALMANAC_DIR + "/%s" % self.slug):
                 os.makedirs(ALMANAC_DIR + "/%s" % self.slug)
+                os.makedirs(ALMANC_DIR + "/%s/examples" % self.slug)
 
         return super(Almanac, self).save(*args, **kwargs)
 
@@ -49,10 +50,8 @@ class Post(models.Model):
 
         if not self.pk:
             if self.from_file:
-                print(file)   
                 self.content = data
-                     
-        print(self.content)
+        
         if self.content != data:
             file.write(str(self.content))
         file.close()
@@ -62,11 +61,12 @@ class Post(models.Model):
 
 class Example(models.Model):
     name = models.CharField(max_length=40, unique=True)
-    code = models.TextField()
-    output = models.TextField()
+    code = models.TextField(blank=True, null=True)
+    output = models.TextField(blank=True, null=True)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     slug = models.SlugField(editable=False)
     language = models.CharField(max_length=40)
+    from_file = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name + " - %s" % self.post 
@@ -77,5 +77,22 @@ class Example(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             self.slug = slugify(self.name)
+        
+        file = open(ALMANAC_DIR + "/%s/examples/%s_(%s).md" % (self.post.almanac.slug, self.slug, self.post.slug), "w+")
+        data = file.read().replace('\n', '\n')
+        print(file.read().replace('\n', ''))
+        formatted_file = "{}\n---\n{}".format(self.code, self.output)
+        print(formatted_file)
+        if not self.pk:
+            if self.from_file:
+                print(data)
+                split_file = data.split("---")
+                print(split_file)
+                self.code = split_file[0]
+                self.output = split_file[1]
+                     
+        if formatted_file != data:
+            file.write(formatted_file)
+        file.close()
 
         return super(Example, self).save(*args, **kwargs)

@@ -29,10 +29,26 @@ p {
   font-size: calc(2vmin * 25%); }
 
 a, p, ul, ol, body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", "Open Sans", Ubuntu, Raleway, sans-serif; }
 
 ul, ol {
   margin-left: 3em; }
+
+blockquote {
+  margin-left: -1.5em;
+  border-left: 1em solid #FE4A49;
+  padding-left: 1.5rem; }
+  blockquote p {
+    color: #949B96;
+    font-size: 1.25rem;
+    font-style: italic; }
+  @media (max-width: 540px) {
+    blockquote {
+      margin-left: 0;
+      border-left-width: 0.5em; } }
+
+code, pre {
+  font-family: "Fira Code", "Fira Mono", "Inconsolata", monospace !important; }
 
 a {
   color: #FE4A49;

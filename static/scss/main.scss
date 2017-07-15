@@ -3,12 +3,14 @@
 $main-color: #FE4A49;
 $secondary-color: goldenrod;
 $main-gray: lightgray;
+$dark-gray: #949B96;
 
 $python-yellow: #FFD53B; 
 $go-blue: #73CDDC;
 
 $display-font: 'Kumar One', serif;
-$content-font: 'Roboto', sans-serif;
+$content-font: 'Roboto', 'Open Sans', Ubuntu, Raleway, sans-serif;
+$code-font: 'Fira Code', 'Fira Mono', 'Inconsolata', monospace; 
 
 $transition: 0.3s all;
 
