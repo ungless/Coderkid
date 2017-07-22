@@ -1,7 +1,7 @@
 /* [============] Variables [============] */
 /* [============] Mixins [============] */
 /* [============] Imports [============] */
-@import url("https://fonts.googleapis.com/css?family=Kumar+One|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Kumar+One|Roboto:700|Roboto");
 * {
   padding: 0;
   margin: 0;
@@ -52,9 +52,12 @@ code, pre {
 
 a {
   color: #FE4A49;
-  text-decoration: none; }
+  text-decoration: none;
+  border-bottom: 2px dotted lightgray; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: none;
+    border-bottom: 2px solid #FE4A49;
+    transition: 0.3s all; }
   a:focus {
     color: goldenrod; }
 
@@ -137,8 +140,7 @@ footer#index-footer {
   padding: 0.5em;
   text-align: right; }
   footer#index-footer a {
-    color: white;
-    text-decoration: underline; }
+    color: white; }
 
 section#latest-almanacs {
   overflow: hidden;
@@ -206,6 +208,7 @@ img.almanac-logo {
   border-radius: 5px;
   padding: 1em;
   text-decoration: none !important;
+  border: 0;
   background: rgba(255, 255, 255, 0.7); }
   @media (max-width: 540px) {
     img.almanac-logo {
@@ -247,6 +250,20 @@ article#post-article {
   @media (max-width: 540px) {
     article#post-article {
       width: 80vw; } }
+  article#post-article li {
+    margin-bottom: 1em; }
+  article#post-article h1, article#post-article h2, article#post-article h3, article#post-article h4, article#post-article h5, article#post-article h6 {
+    font-family: "Roboto", "Open Sans", Ubuntu, Raleway, sans-serif;
+    font-size: 1.5rem;
+    margin: 1em 0;
+    border-bottom: 3px dashed black; }
+  article#post-article strong {
+    font-weight: 700; }
+  article#post-article p, article#post-article pre[class*="language-"] {
+    margin-left: 1.5em; }
+    @media (max-width: 540px) {
+      article#post-article p, article#post-article pre[class*="language-"] {
+        margin-left: 0; } }
   article#post-article p {
     padding: 0.2em;
     margin-bottom: 0.5em; }
@@ -269,10 +286,10 @@ section#post-examples {
         width: 90vw; } }
 
 code {
-  background: lightgray;
-  padding: 0.3em;
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
-  border-radius: 5px; }
+  background: rgba(254, 74, 73, 0.65);
+  padding: 0.2em;
+  color: white;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.3); }
 
 section#example-content {
   width: 60vw;

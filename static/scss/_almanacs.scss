@@ -13,6 +13,7 @@ img.almanac-logo {
     border-radius: 5px;
     padding: 1em;
     text-decoration: none !important;
+    border: 0;
     background: rgba(255, 255, 255, 0.7);
     
     @include mobile {

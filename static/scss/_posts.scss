@@ -5,11 +5,36 @@ article#post-article {
     @include mobile {
         width: 80vw;
     }
+    
+    li {
+        margin-bottom: 1em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $content-font;
+        font-size: 1.5rem;
+        margin: 1em 0;
+        border-bottom: 3px dashed black;
+    }
+    
+    strong {
+        font-weight: 700;
+    }
+
+    p, pre[class*="language-"] {
+        margin-left: 1.5em;
+
+        @include mobile {
+            margin-left: 0;    
+        }
+    }
 
     p {
         padding: 0.2em;
         margin-bottom: 0.5em;
     }
+
+        
 }
 
 section#post-examples {
@@ -38,8 +63,8 @@ section#post-examples {
 }
 
 code {
-    background: $main-gray;
-    padding: 0.3em;
-    text-shadow: 1px 1px rgba(255,255,255,0.3);
-    border-radius: 5px;
+    background: rgba($main-color, 0.65);
+    padding: 0.2em;
+    color: rgba(255,255,255, 1);
+    text-shadow: 0px 1px rgba(black,0.3);
 }
