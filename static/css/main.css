@@ -19,14 +19,17 @@ h2 {
   @media (max-width: 540px) {
     h2 {
       font-size: 5vw; } }
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) and (max-width: 1920px) {
     h2 {
       font-size: 2vw; } }
 
 p {
   padding: 1em;
   line-height: 1.5em;
-  font-size: calc(2vmin * 25%); }
+  font-size: 1em; }
+  @media (min-width: 1920px) and (max-width: 3840px) {
+    p {
+      font-size: 1.5em; } }
 
 a, p, ul, ol, body {
   font-family: "Roboto", "Open Sans", Ubuntu, Raleway, sans-serif; }
@@ -124,12 +127,18 @@ header#index-header {
     header#index-header h1 a {
       color: black;
       font: 3vw 'Kumar One'; }
-      @media (min-width: 1024px) {
+      @media (min-width: 1024px) and (max-width: 1920px) {
         header#index-header h1 a {
           font-size: 5vw; } }
+      @media (min-width: 1024px) {
+        header#index-header h1 a {
+          font-size: 3vw; } }
       @media (min-width: 540px) and (max-width: 1023px) {
         header#index-header h1 a {
           font-size: 5.5vw; } }
+      @media (min-width: 1920px) and (max-width: 3840px) {
+        header#index-header h1 a {
+          font-size: 2vw; } }
       header#index-header h1 a:hover {
         color: #FE4A49; }
 
@@ -150,12 +159,19 @@ section#latest-almanacs {
   overflow: hidden;
   margin: 0;
   padding: 0; }
+  @media (min-width: 1920px) and (max-width: 3840px) {
+    section#latest-almanacs {
+      margin: 0 auto;
+      width: 60vw; } }
   section#latest-almanacs h2 {
     font-size: 4vw;
     padding: 1em 0 0 1em; }
     @media (min-width: 1024px) {
       section#latest-almanacs h2 {
         font-size: 2vw; } }
+    @media (min-width: 1920px) and (max-width: 3840px) {
+      section#latest-almanacs h2 {
+        font-size: 1vw; } }
   section#latest-almanacs .new-almanac {
     background: linear-gradient(to top right, #ad0201, #FE4A49);
     color: white;
@@ -182,7 +198,7 @@ section#latest-almanacs {
     @media (max-width: 540px) {
       section#latest-almanacs .almanac {
         padding: 3em 2em; } }
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px) and (max-width: 1920px) {
       section#latest-almanacs .almanac {
         font-size: 1.5rem; } }
     section#latest-almanacs .almanac .almanac-title-content {
@@ -190,6 +206,11 @@ section#latest-almanacs {
       margin: 0 auto;
       padding: 2em 0;
       width: 80vw; }
+      @media (min-width: 1920px) and (max-width: 3840px) {
+        section#latest-almanacs .almanac .almanac-title-content {
+          padding: 8em 2em; } }
+      section#latest-almanacs .almanac .almanac-title-content img {
+        transition: 0.3s all; }
       section#latest-almanacs .almanac .almanac-title-content a {
         color: white;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
@@ -198,7 +219,10 @@ section#latest-almanacs {
           text-decoration: underline; }
         section#latest-almanacs .almanac .almanac-title-content a:hover {
           text-decoration: none;
-          border: none !important; }
+          color: #FE4A49; }
+          section#latest-almanacs .almanac .almanac-title-content a:hover img {
+            transition: 0.3s all;
+            background: #FE4A49; }
       section#latest-almanacs .almanac .almanac-title-content h3 {
         font-family: "Kumar One", serif;
         font-size: 2.5rem;
@@ -215,7 +239,7 @@ section#latest-almanacs {
   background: linear-gradient(to top left, #c5eaf0, #73CDDC) !important; }
 
 img.almanac-logo {
-  width: 10vw;
+  width: 10em;
   display: inline;
   border-radius: 5px;
   padding: 1em;
@@ -226,7 +250,7 @@ img.almanac-logo {
     img.almanac-logo {
       width: 15vw;
       padding: 0.4em; } }
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) and (max-width: 1920px) {
     img.almanac-logo {
       width: 7vw; } }
   img.almanac-logo:hover {

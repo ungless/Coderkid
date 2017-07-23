@@ -19,7 +19,7 @@ $bp-mobile: 540px;
 $bp-tablet: 768px;
 $bp-desktop: 1024px;
 $bp-widescreen: 1920px;
-
+$bp-quadhd: 3840px;
 
 /* [============] Mixins [============] */
 
@@ -29,6 +29,18 @@ $bp-widescreen: 1920px;
   }
 }
 
+@mixin widescreen {
+  @media (min-width: #{$bp-desktop}) {
+   @content;
+ } 
+}
+
+@mixin quadhd {
+  @media (min-width: #{$bp-widescreen}) and (max-width: #{$bp-quadhd}) {
+   @content;
+ } 
+}
+
 @mixin tablet {
    @media (min-width: #{$bp-mobile}) and (max-width: #{$bp-desktop - 1px}){
     @content;
@@ -36,7 +48,7 @@ $bp-widescreen: 1920px;
 }
 
 @mixin desktop {
-   @media (min-width: #{$bp-desktop}){
+   @media (min-width: #{$bp-desktop}) and (max-width: #{$bp-widescreen}){
     @content;
   }
 }

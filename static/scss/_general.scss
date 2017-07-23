@@ -28,7 +28,12 @@ h2 {
 p {
     padding: 1em;
     line-height: 1.5em;
-    font-size: calc(2vmin * 25%);
+    // font-size: calc(2vmin * 25%);
+    font-size: 1em;
+
+    @include quadhd {
+        font-size: 1.5em;
+    }
 }
 
 

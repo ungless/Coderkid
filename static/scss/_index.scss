@@ -36,8 +36,16 @@ header#index-header {
                 font-size: 5vw;
             }
             
+            @include widescreen {
+                font-size: 3vw;
+            }
+
             @include tablet {
                 font-size: 5.5vw; 
+            }
+            
+            @include quadhd {
+                font-size: 2vw;
             }
 
             &:hover {
@@ -70,12 +78,21 @@ section#latest-almanacs {
     margin: 0;
     padding: 0;
     
+    @include quadhd {
+        margin: 0 auto;
+        width: 60vw;
+    }
+
     h2 {
         font-size: 4vw;
         padding: 1em 0 0 1em;
         
-        @include desktop {
+        @include widescreen {
             font-size: 2vw;
+        }
+
+        @include quadhd {
+            font-size: 1vw;
         }
     }
 
@@ -117,18 +134,35 @@ section#latest-almanacs {
             margin: 0 auto;
             padding: 2em 0;
             width: 80vw;
+            
+
+            @include quadhd {
+                padding: 8em 2em;
+            }
+
+            img {
+                transition: $transition;
+            }
 
             a {
                 color: white;
                 text-shadow: 1px 1px rgba(0,0,0,0.2);
                 border: 0;
+
                 h3 {
                     text-decoration: underline;
                 }
+    
+                
                 
                 &:hover {
-                    text-decoration: none;
-                    border: none !important;
+                    text-decoration: none;   
+                    color: $main-color;
+                    
+                    img {
+                        transition: $transition;
+                        background: $main-color;
+                    }
                 }
             }
 
