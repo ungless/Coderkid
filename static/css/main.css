@@ -105,11 +105,12 @@ main.main-header {
 header#index-header {
   padding: 0.5em;
   margin: 0 auto;
-  width: 60em; }
+  width: 60em;
+  max-width: 90vw; }
   @media (max-width: 540px) {
     header#index-header {
       width: 95%; } }
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 540px) and (max-width: 1023px) {
     header#index-header {
       width: 90%; } }
   header#index-header p {
@@ -123,9 +124,12 @@ header#index-header {
     header#index-header h1 a {
       color: black;
       font: 3vw 'Kumar One'; }
-      @media (max-width: 540px) {
+      @media (min-width: 1024px) {
         header#index-header h1 a {
-          font-size: 9vw; } }
+          font-size: 5vw; } }
+      @media (min-width: 540px) and (max-width: 1023px) {
+        header#index-header h1 a {
+          font-size: 5.5vw; } }
       header#index-header h1 a:hover {
         color: #FE4A49; }
 
@@ -147,7 +151,11 @@ section#latest-almanacs {
   margin: 0;
   padding: 0; }
   section#latest-almanacs h2 {
+    font-size: 4vw;
     padding: 1em 0 0 1em; }
+    @media (min-width: 1024px) {
+      section#latest-almanacs h2 {
+        font-size: 2vw; } }
   section#latest-almanacs .new-almanac {
     background: linear-gradient(to top right, #ad0201, #FE4A49);
     color: white;
@@ -184,11 +192,13 @@ section#latest-almanacs {
       width: 80vw; }
       section#latest-almanacs .almanac .almanac-title-content a {
         color: white;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+        border: 0; }
+        section#latest-almanacs .almanac .almanac-title-content a h3 {
+          text-decoration: underline; }
         section#latest-almanacs .almanac .almanac-title-content a:hover {
-          text-decoration: none; }
-          section#latest-almanacs .almanac .almanac-title-content a:hover h3 {
-            text-decoration: underline; }
+          text-decoration: none;
+          border: none !important; }
       section#latest-almanacs .almanac .almanac-title-content h3 {
         font-family: "Kumar One", serif;
         font-size: 2.5rem;
@@ -196,8 +206,10 @@ section#latest-almanacs {
         padding: 0 0 1em 0; }
 
 .almanac-python {
-  background: linear-gradient(to top left, #ffeba1, #FFD53B) !important;
-  background: red; }
+  background: linear-gradient(to top left, #ffeba1, #FFD53B) !important; }
+
+.almanac-i3 {
+  background: linear-gradient(to top left, #6c8fb9, #3E5C81) !important; }
 
 .almanac-go {
   background: linear-gradient(to top left, #c5eaf0, #73CDDC) !important; }
@@ -286,6 +298,7 @@ section#post-examples {
         width: 90vw; } }
 
 code {
+  line-height: 1.7em;
   background: rgba(254, 74, 73, 0.65);
   padding: 0.2em;
   color: white;

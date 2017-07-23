@@ -1,6 +1,9 @@
 .almanac-python {
     @include almanac-gradient($python-yellow);
-    background: red;
+}
+
+.almanac-i3 {
+    @include almanac-gradient($i3-blue);
 }
 
 .almanac-go {

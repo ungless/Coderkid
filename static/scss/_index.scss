@@ -7,6 +7,7 @@ header#index-header {
     padding: 0.5em;
     margin: 0 auto;
     width: 60em;
+    max-width: 90vw;
 
     @include mobile {
         width: 95%;
@@ -30,9 +31,13 @@ header#index-header {
         a {
             color: black;
             font: 3vw 'Kumar One';
-
-            @include mobile {
-                font-size: 9vw; 
+            
+            @include desktop {
+                font-size: 5vw;
+            }
+            
+            @include tablet {
+                font-size: 5.5vw; 
             }
 
             &:hover {
@@ -66,7 +71,12 @@ section#latest-almanacs {
     padding: 0;
     
     h2 {
+        font-size: 4vw;
         padding: 1em 0 0 1em;
+        
+        @include desktop {
+            font-size: 2vw;
+        }
     }
 
     section#almanac-displays {
@@ -111,13 +121,14 @@ section#latest-almanacs {
             a {
                 color: white;
                 text-shadow: 1px 1px rgba(0,0,0,0.2);
+                border: 0;
+                h3 {
+                    text-decoration: underline;
+                }
                 
                 &:hover {
                     text-decoration: none;
-
-                    h3 {
-                        text-decoration: underline;
-                    }
+                    border: none !important;
                 }
             }
 

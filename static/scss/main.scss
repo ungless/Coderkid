@@ -7,6 +7,7 @@ $dark-gray: #949B96;
 
 $python-yellow: #FFD53B; 
 $go-blue: #73CDDC;
+$i3-blue: #3E5C81;
 
 $display-font: 'Kumar One', serif;
 $content-font: 'Roboto', 'Open Sans', Ubuntu, Raleway, sans-serif;
@@ -29,7 +30,7 @@ $bp-widescreen: 1920px;
 }
 
 @mixin tablet {
-   @media (min-width: #{$bp-tablet}) and (max-width: #{$bp-desktop - 1px}){
+   @media (min-width: #{$bp-mobile}) and (max-width: #{$bp-desktop - 1px}){
     @content;
   }
 }
