@@ -36,6 +36,7 @@ class Post(models.Model):
     almanac = models.ForeignKey(Almanac, on_delete=models.CASCADE)
     from_file = models.BooleanField(default=False)
     rank = models.IntegerField(default=0)
+    is_published = models.BooleanField(default=False)   
 
     def __str__(self):
         return self.title + " (%s)" % self.almanac 
