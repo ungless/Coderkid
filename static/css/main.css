@@ -12,24 +12,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Kumar One", serif; }
 
 h1 {
-  font-size: 5.9vw; }
+  font-size: 5.9em; }
 
 h2 {
-  font-size: 3.0vw; }
+  font-size: 3.0em; }
   @media (max-width: 540px) {
     h2 {
-      font-size: 5vw; } }
+      font-size: 5em; } }
   @media (min-width: 1024px) and (max-width: 1920px) {
     h2 {
-      font-size: 2vw; } }
+      font-size: 2em; } }
+
+h3 {
+  font-size: 2em; }
+  @media (min-width: 1024px) and (max-width: 1920px) {
+    h3 {
+      font-size: 1.4em; } }
 
 p {
   padding: 1em;
   line-height: 1.5em;
   font-size: 1em; }
-  @media (min-width: 1920px) and (max-width: 3840px) {
-    p {
-      font-size: 1.5em; } }
 
 a, p, ul, ol, body {
   font-family: "Roboto", "Open Sans", Ubuntu, Raleway, sans-serif; }
@@ -67,23 +70,27 @@ a {
 .options-ul {
   margin-left: 5em;
   list-style: none; }
-  .options-ul li a {
-    padding: 1em 0.5em;
-    border-bottom: 1px solid lightgray;
-    font-size: 1.2rem;
-    width: 70vw;
-    display: block;
-    transition: 0.3s all; }
-    .options-ul li a:hover {
-      transform: translateX(2em);
-      text-decoration: none;
-      transition: 0.3s all;
-      box-shadow: 1px 1px 0 lightgray; }
-    @media (max-width: 540px) {
-      .options-ul li a {
-        width: 90vw; }
-        .options-ul li a:hover {
-          transform: translateX(0); } }
+  .options-ul li {
+    width: 70%; }
+    .options-ul li a {
+      padding: 1em 0.5em;
+      border-bottom: 1px solid lightgray;
+      font-size: 1.2rem;
+      display: block;
+      transition: 0.3s all; }
+      .options-ul li a:hover {
+        transform: translateX(2em);
+        text-decoration: none;
+        transition: 0.3s all;
+        box-shadow: 1px 1px 0 lightgray; }
+      @media (max-width: 540px) {
+        .options-ul li a {
+          width: 90vw; }
+          .options-ul li a:hover {
+            transform: translateX(0); } }
+  @media (min-width: 1920px) and (max-width: 3840px) {
+    .options-ul {
+      width: 60vw; } }
   @media (max-width: 540px) {
     .options-ul {
       margin: 0 5vw;
@@ -274,6 +281,10 @@ section#almanac-posts {
     section#almanac-posts {
       padding: 0;
       margin: 0 0 2em 0; } }
+  @media (min-width: 1920px) and (max-width: 3840px) {
+    section#almanac-posts {
+      margin: 2em auto;
+      width: 60vw; } }
   section#almanac-posts h3 {
     font-size: 1.7rem; }
     @media (max-width: 540px) {
@@ -281,7 +292,7 @@ section#almanac-posts {
         padding: 2em 0 0.5em 1em; } }
 
 article#post-article {
-  width: 60vw;
+  width: 60em;
   margin: 0 auto; }
   @media (max-width: 540px) {
     article#post-article {
@@ -308,10 +319,6 @@ section#post-examples {
   padding: 2em;
   margin: 2em; }
   @media (max-width: 540px) {
-    section#post-examples {
-      padding: 0 0 2em 0;
-      margin: 0; } }
-  @media (max-width: 540px) {
     section#post-examples h3 {
       padding: 2em 0 0.5em 1em; } }
   section#post-examples p {
@@ -320,6 +327,14 @@ section#post-examples {
       section#post-examples p {
         margin: 0 auto;
         width: 90vw; } }
+  @media (min-width: 1920px) and (max-width: 3840px) {
+    section#post-examples {
+      margin: 2em auto;
+      width: 60vw; } }
+  @media (max-width: 540px) {
+    section#post-examples {
+      padding: 0 0 2em 0;
+      margin: 0; } }
 
 code {
   line-height: 1.7em;

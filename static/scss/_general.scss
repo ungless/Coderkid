@@ -10,18 +10,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5.9vw;
+    font-size: 5.9em;
 }
 
 h2 {
-    font-size: 3.0vw;
+    font-size: 3.0em;
 
     @include mobile {
-        font-size: 5vw;
+        font-size: 5em;
     }
 
     @include desktop {
-        font-size: 2vw;
+        font-size: 2em;
+    }
+}
+
+h3 {
+    font-size: 2em;
+
+    @include desktop {
+        font-size: 1.4em;
     }
 }
 
@@ -32,7 +40,7 @@ p {
     font-size: 1em;
 
     @include quadhd {
-        font-size: 1.5em;
+        // font-size: 0.8em;
     }
 }
 
@@ -87,11 +95,13 @@ a {
     list-style: none;
 
     li {
+        width: 70%;
+
         a {
             padding: 1em 0.5em;
             border-bottom: 1px solid $main-gray;
             font-size: 1.2rem;
-            width: 70vw;
+
             display: block;
             transition: $transition;
 
@@ -110,6 +120,10 @@ a {
                 }
             }
         }
+    }
+
+    @include quadhd {
+        width: 60vw;
     }
 
     @include mobile {

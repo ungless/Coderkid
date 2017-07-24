@@ -60,4 +60,3 @@ class ExampleView(generic.DetailView):
     def get_queryset(self):
         self.obj = models.Example.objects.filter(slug=self.kwargs["example_slug"]).filter(post__slug=self.kwargs["post_slug"])
         return self.obj
-

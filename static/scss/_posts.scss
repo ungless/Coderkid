@@ -1,5 +1,5 @@
 article#post-article {
-    width: 60vw;
+    width: 60em;
     margin: 0 auto;
     
     @include mobile {
@@ -40,12 +40,6 @@ article#post-article {
 section#post-examples {
     padding: 2em;
     margin: 2em;
-    
-    @include mobile {
-        padding: 0 0 2em 0;
-        margin: 0;
-    }
-
     h3 {
         @include mobile {
             padding: 2em 0 0.5em 1em;
@@ -60,6 +54,17 @@ section#post-examples {
             width: 90vw;
         }
     }
+    
+    @include quadhd {
+        margin: 2em auto;
+        width: 60vw;
+    }
+
+    @include mobile {
+        padding: 0 0 2em 0;
+        margin: 0;
+    }
+
 }
 
 code {

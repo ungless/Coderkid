@@ -59,6 +59,11 @@ section#almanac-posts {
         margin: 0 0 2em 0;
     }
 
+    @include quadhd {
+        margin: 2em auto;
+        width: 60vw;
+    }
+
     h3 {
         font-size: 1.7rem;
     
