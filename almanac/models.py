@@ -40,7 +40,7 @@ class Post(models.Model):
     is_published = models.BooleanField(default=False)   
 
     class Meta:
-        ordering = ('rank',)
+        ordering = ['almanac', 'rank']
 
     def __str__(self):
         return self.title + " (%s)" % self.almanac 
