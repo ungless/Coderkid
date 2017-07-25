@@ -11,6 +11,7 @@ class Almanac(models.Model):
     description = models.TextField(max_length=500)
     created = models.DateField(default=timezone.now)
     slug = models.SlugField(editable=False)
+    is_published = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
@@ -36,7 +37,7 @@ class Post(models.Model):
     almanac = models.ForeignKey(Almanac, on_delete=models.CASCADE)
     from_file = models.BooleanField(default=False)
     rank = models.IntegerField(default=0)
-    is_published = models.BooleanField(default=False)   
+    is_published = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title + " (%s)" % self.almanac 

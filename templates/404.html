@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found - {% endblock %}
+
+{% block content %}
+<main id="404-main">
+    <h2>Tha-tha-that's not a page!</h2>
+    <figure>Go back to the <a href="{% url 'index' %}">homepage</a> and re-navigate.</figure>
+</main>
+{% endblock %}

@@ -6,11 +6,13 @@ from django.utils import timezone
 
 from . import models
 
+class FourOhFourView(generic.TemplateView):
+    template_name = "404.html"
 
 class IndexView(generic.ListView):
     template_name = "almanac/index.html"
     context_object_name = "almanacs"
-    queryset = models.Almanac.objects.all().order_by("-created")
+    queryset = models.Almanac.objects.filter(is_published=True).order_by("-created")
 
     def get_context_data(self, *args, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
@@ -34,7 +36,7 @@ class AlmanacView(generic.DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(AlmanacView, self).get_context_data(**kwargs)
-        context["posts"] = models.Post.objects.filter(almanac=self.obj).order_by("rank")
+        context["posts"] = models.Post.objects.filter(almanac=self.obj, is_published=True).order_by("rank")
         return context
 
 
@@ -44,7 +46,7 @@ class PostView(generic.DetailView):
     slug_url_kwarg = "post_slug"
 
     def get_queryset(self):
-        self.obj = models.Post.objects.filter(slug=self.kwargs["post_slug"]).filter(almanac__slug=self.kwargs["almanac_slug"])
+        self.obj = models.Post.objects.filter(slug=self.kwargs["post_slug"], is_published=True, almanac__slug=self.kwargs["almanac_slug"])
         return self.obj
 
     def get_context_data(self, *args, **kwargs):
@@ -58,5 +60,5 @@ class ExampleView(generic.DetailView):
     slug_url_kwarg = "example_slug"
 
     def get_queryset(self):
-        self.obj = models.Example.objects.filter(slug=self.kwargs["example_slug"]).filter(post__slug=self.kwargs["post_slug"])
+        self.obj = models.Example.objects.filter(slug=self.kwargs["example_slug"], post__is_published=True, post__slug=self.kwargs["post_slug"])
         return self.obj
