@@ -31,6 +31,8 @@ h3 {
     @include desktop {
         font-size: 1.4rem;
     }
+
+
 }
 
 p {
@@ -78,6 +80,7 @@ a {
     color: $main-color;
     text-decoration: none;
     border-bottom: 2px dotted $main-gray;
+    word-wrap: break-word;
 
     &:hover {
         text-decoration: none;
