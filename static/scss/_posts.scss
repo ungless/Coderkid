@@ -33,13 +33,12 @@ article#post-article {
         padding: 0.2em;
         margin-bottom: 0.5em;
     }
-
-        
 }
 
 section#post-examples {
     padding: 2em;
     margin: 2em;
+
     h3 {
         @include mobile {
             padding: 2em 0 0.5em 1em;

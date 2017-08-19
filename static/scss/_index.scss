@@ -30,23 +30,7 @@ header#index-header {
         
         a {
             color: black;
-            font: 3vw 'Kumar One';
-            
-            @include desktop {
-                font-size: 5vw;
-            }
-            
-            @include widescreen {
-                font-size: 3vw;
-            }
-
-            @include tablet {
-                font-size: 5.5vw; 
-            }
-            
-            @include quadhd {
-                font-size: 2vw;
-            }
+            font: 2rem 'Kumar One';
 
             &:hover {
                 color: $main-color;
@@ -84,16 +68,8 @@ section#latest-almanacs {
     }
 
     h2 {
-        font-size: 4vw;
+        font-size: 1.5rem;
         padding: 1em 0 0 1em;
-        
-        @include widescreen {
-            font-size: 2vw;
-        }
-
-        @include quadhd {
-            font-size: 1vw;
-        }
     }
 
     section#almanac-displays {

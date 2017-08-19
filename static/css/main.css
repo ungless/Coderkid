@@ -12,22 +12,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Kumar One", serif; }
 
 h1 {
-  font-size: 5.9em; }
+  font-size: 5.9rem; }
 
 h2 {
-  font-size: 3.0em; }
+  font-size: 2rem; }
   @media (max-width: 540px) {
     h2 {
-      font-size: 5em; } }
+      font-size: 1.7rem; } }
   @media (min-width: 1024px) and (max-width: 1920px) {
     h2 {
-      font-size: 2em; } }
+      font-size: 2rem; } }
 
 h3 {
-  font-size: 2em; }
+  font-size: 1.2rem; }
   @media (min-width: 1024px) and (max-width: 1920px) {
     h3 {
-      font-size: 1.4em; } }
+      font-size: 1.4rem; } }
 
 p {
   padding: 1em;
@@ -133,19 +133,7 @@ header#index-header {
     text-align: center; }
     header#index-header h1 a {
       color: black;
-      font: 3vw 'Kumar One'; }
-      @media (min-width: 1024px) and (max-width: 1920px) {
-        header#index-header h1 a {
-          font-size: 5vw; } }
-      @media (min-width: 1024px) {
-        header#index-header h1 a {
-          font-size: 3vw; } }
-      @media (min-width: 540px) and (max-width: 1023px) {
-        header#index-header h1 a {
-          font-size: 5.5vw; } }
-      @media (min-width: 1920px) and (max-width: 3840px) {
-        header#index-header h1 a {
-          font-size: 2vw; } }
+      font: 2rem 'Kumar One'; }
       header#index-header h1 a:hover {
         color: #FE4A49; }
 
@@ -171,14 +159,8 @@ section#latest-almanacs {
       margin: 0 auto;
       width: 60vw; } }
   section#latest-almanacs h2 {
-    font-size: 4vw;
+    font-size: 1.5rem;
     padding: 1em 0 0 1em; }
-    @media (min-width: 1024px) {
-      section#latest-almanacs h2 {
-        font-size: 2vw; } }
-    @media (min-width: 1920px) and (max-width: 3840px) {
-      section#latest-almanacs h2 {
-        font-size: 1vw; } }
   section#latest-almanacs .new-almanac {
     background: linear-gradient(to top right, #ad0201, #FE4A49);
     color: white;
@@ -271,8 +253,7 @@ main#main-almanac {
     color: white;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
     display: inline;
-    margin: 1em 0.5em;
-    font-size: 2rem; }
+    margin: 1em 0.5em; }
 
 section#almanac-posts {
   padding: 2em;
@@ -285,11 +266,9 @@ section#almanac-posts {
     section#almanac-posts {
       margin: 2em auto;
       width: 60vw; } }
-  section#almanac-posts h3 {
-    font-size: 1.7rem; }
-    @media (max-width: 540px) {
-      section#almanac-posts h3 {
-        padding: 2em 0 0.5em 1em; } }
+  @media (max-width: 540px) {
+    section#almanac-posts h3 {
+      padding: 2em 0 0.5em 1em; } }
 
 article#post-article {
   width: 60em;

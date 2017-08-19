@@ -46,7 +46,6 @@ main#main-almanac {
         text-shadow: 1px 1px rgba(0,0,0,0.2);        
         display: inline;
         margin: 1em 0.5em;
-        font-size: 2rem;
     }
 }
 
@@ -65,8 +64,6 @@ section#almanac-posts {
     }
 
     h3 {
-        font-size: 1.7rem;
-    
         @include mobile {
             padding: 2em 0 0.5em 1em;
         }

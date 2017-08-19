@@ -10,26 +10,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5.9em;
+    font-size: 5.9rem;
 }
 
 h2 {
-    font-size: 3.0em;
+    font-size: 2rem;
 
     @include mobile {
-        font-size: 5em;
+        font-size: 1.7rem;
     }
 
     @include desktop {
-        font-size: 2em;
+        font-size: 2rem;
     }
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 1.2rem;
 
     @include desktop {
-        font-size: 1.4em;
+        font-size: 1.4rem;
     }
 }
 
