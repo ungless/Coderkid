@@ -177,14 +177,7 @@ section#latest-almanacs {
     background: linear-gradient(to top right, white, lightgray);
     margin: 0 -4em 1em -4em;
     padding: 4em 4em;
-    width: calc(100vw + 8em);
-        /*&:nth-child(even) {
-            transform: rotate(4deg);
-
-            .almanac-title-content {
-                transform: rotate(-4deg);
-            }
-        }*/ }
+    width: calc(100vw + 8em); }
     @media (max-width: 540px) {
       section#latest-almanacs .almanac {
         padding: 3em 2em; } }
@@ -206,18 +199,14 @@ section#latest-almanacs {
         text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
         border: 0; }
         section#latest-almanacs .almanac .almanac-title-content a h3 {
-          text-decoration: underline; }
-        section#latest-almanacs .almanac .almanac-title-content a:hover {
-          text-decoration: none;
-          color: #FE4A49; }
-          section#latest-almanacs .almanac .almanac-title-content a:hover img {
-            transition: 0.3s all;
-            background: #FE4A49; }
-      section#latest-almanacs .almanac .almanac-title-content h3 {
-        font-family: "Kumar One", serif;
-        font-size: 2.5rem;
-        display: inline;
-        padding: 0 0 1em 0; }
+          font-family: "Kumar One", serif;
+          font-size: 2.5rem;
+          display: inline;
+          margin: 0 0 0 1.5rem;
+          border-bottom: 2px dashed white; }
+        section#latest-almanacs .almanac .almanac-title-content a:hover h3 {
+          color: #FE4A49;
+          border-bottom: 2px solid #FE4A49; }
 
 .almanac-python {
   background: linear-gradient(to top left, #ffeba1, #FFD53B) !important; }

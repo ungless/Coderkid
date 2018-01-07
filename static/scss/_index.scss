@@ -27,7 +27,7 @@ header#index-header {
     h1 {
         font-size: 0;
         text-align: center;
-        
+
         a {
             color: black;
             font: 2rem 'Kumar One';
@@ -53,7 +53,7 @@ footer#index-footer {
 
     a {
         color: white;
-      
+
     }
 }
 
@@ -61,7 +61,7 @@ section#latest-almanacs {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    
+
     @include quadhd {
         margin: 0 auto;
         width: 60vw;
@@ -75,7 +75,7 @@ section#latest-almanacs {
     section#almanac-displays {
         // background: $secondary-color;
     }
-    
+
     .new-almanac {
         background: linear-gradient(to top right, darken($main-color, 30%), $main-color);
         color: white;
@@ -96,7 +96,7 @@ section#latest-almanacs {
         margin: 0 -4em 1em -4em;
         padding: 4em 4em;
         width: calc(100vw + 8em);
-        
+
         @include mobile {
             padding: 3em 2em;
         }
@@ -110,7 +110,7 @@ section#latest-almanacs {
             margin: 0 auto;
             padding: 2em 0;
             width: 80vw;
-            
+
 
             @include quadhd {
                 padding: 8em 2em;
@@ -126,36 +126,20 @@ section#latest-almanacs {
                 border: 0;
 
                 h3 {
-                    text-decoration: underline;
+                    font-family: $display-font;
+                    font-size: 2.5rem;
+                    display: inline;
+                    margin: 0 0 0 1.5rem;
+                    border-bottom: 2px dashed white;
                 }
-    
-                
-                
+
                 &:hover {
-                    text-decoration: none;   
-                    color: $main-color;
-                    
-                    img {
-                        transition: $transition;
-                        background: $main-color;
+                    h3 {
+                        color: $main-color;
+                        border-bottom: 2px solid $main-color;
                     }
                 }
             }
-
-            h3 {
-                font-family: $display-font;
-                font-size: 2.5rem;
-                display: inline;
-                padding: 0 0 1em 0;   
-            }            
         }
-
-        /*&:nth-child(even) {
-            transform: rotate(4deg);
-
-            .almanac-title-content {
-                transform: rotate(-4deg);
-            }
-        }*/
     }
 }

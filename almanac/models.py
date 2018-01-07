@@ -4,13 +4,13 @@ from Coderkid.settings import ALMANAC_DIR
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 class Almanac(models.Model):
     title = models.CharField(max_length=40, unique=True)
     description = models.TextField(max_length=500)
     created = models.DateField(default=timezone.now)
-    slug = models.SlugField(editable=False)
+    slug = models.SlugField(editable=False, unique=True)
     is_published = models.BooleanField(default=False)
 
     def __str__(self):
@@ -37,13 +37,13 @@ class Post(models.Model):
     almanac = models.ForeignKey(Almanac, on_delete=models.CASCADE)
     from_file = models.BooleanField(default=False)
     rank = models.IntegerField(default=0)
-    is_published = models.BooleanField(default=False)   
+    is_published = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['almanac', 'rank']
 
     def __str__(self):
-        return self.title + " (%s)" % self.almanac 
+        return self.title + " (%s)" % self.almanac
 
     def get_absolute_url(self):
         return reverse("post", kwargs={"almanac_slug": self.almanac.slug, "post_slug": self.slug})
@@ -51,22 +51,22 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             self.slug = slugify(self.title)
-        file = open(ALMANAC_DIR + "/%s/%s.md" % (self.almanac.slug, self.slug), "w+")
-        data = file.read().replace('\n', '\n')
+            file = open(ALMANAC_DIR + "/%s/%s.md" % (self.almanac.slug, self.slug), "w+")
+            data = file.read().replace('\n', '\n')
 
-        if not self.pk:
-            if self.from_file:
-                self.content = data
-        
-        if self.content != data:
-            file.write(str(self.content))
-        file.close()
+            if not self.pk:
+                if self.from_file:
+                    self.content = data
+
+            if self.content != data:
+                file.write(str(self.content))
+                file.close()
 
         return super(Post, self).save(*args, **kwargs)
 
 
 class Example(models.Model):
-    name = models.CharField(max_length=40, unique=True)
+    name = models.CharField(max_length=40)
     code = models.TextField(blank=True, null=True)
     output = models.TextField(blank=True, null=True)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
@@ -75,7 +75,7 @@ class Example(models.Model):
     from_file = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.name + " - %s" % self.post 
+        return self.name + " - %s" % self.post
 
     def get_absolute_url(self):
         return reverse("example", kwargs={"almanac_slug": self.post.almanac.slug, "post_slug": self.post.slug, "example_slug": self.slug})
@@ -83,7 +83,7 @@ class Example(models.Model):
     def save(self, *args, **kwargs):
         if not self.pk:
             self.slug = slugify(self.name)
-        
+
         file = open(ALMANAC_DIR + "/%s/examples/%s_(%s).md" % (self.post.almanac.slug, self.slug, self.post.slug), "w+")
         data = file.read().replace('\n', '\n')
         print(file.read().replace('\n', ''))
@@ -96,9 +96,9 @@ class Example(models.Model):
                 print(split_file)
                 self.code = split_file[0]
                 self.output = split_file[1]
-                     
+
         if formatted_file != data:
             file.write(formatted_file)
-        file.close()
+            file.close()
 
         return super(Example, self).save(*args, **kwargs)

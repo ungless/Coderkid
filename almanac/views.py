@@ -29,6 +29,7 @@ class IndexView(generic.ListView):
 class AlmanacView(generic.DetailView):
     template_name = "almanac/detail.html"
     context_object_name = "almanac"
+    model = models.Almanac
 
     def get_queryset(self):
         self.obj = models.Almanac.objects.filter(slug=self.kwargs["slug"])
@@ -36,7 +37,8 @@ class AlmanacView(generic.DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(AlmanacView, self).get_context_data(**kwargs)
-        context["posts"] = models.Post.objects.filter(almanac=self.obj, is_published=True).order_by("rank")
+        context["posts"] = models.Post.objects.filter(almanac=self.get_queryset()[:1], is_published=True).order_by("rank")
+        print(context["posts"])
         return context
 
 
@@ -47,11 +49,12 @@ class PostView(generic.DetailView):
 
     def get_queryset(self):
         self.obj = models.Post.objects.filter(slug=self.kwargs["post_slug"], is_published=True, almanac__slug=self.kwargs["almanac_slug"])
+        print(self.obj)
         return self.obj
 
     def get_context_data(self, *args, **kwargs):
         context = super(PostView, self).get_context_data(**kwargs)
-        context["examples"] = models.Example.objects.filter(post=self.obj)
+        context["examples"] = models.Example.objects.filter(post=self.get_queryset()[:1])
         return context
 
 class ExampleView(generic.DetailView):

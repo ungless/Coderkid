@@ -5,13 +5,13 @@ $secondary-color: goldenrod;
 $main-gray: lightgray;
 $dark-gray: #949B96;
 
-$python-yellow: #FFD53B; 
+$python-yellow: #FFD53B;
 $go-blue: #73CDDC;
 $i3-blue: #3E5C81;
 
 $display-font: 'Kumar One', serif;
 $content-font: 'Roboto', 'Open Sans', Ubuntu, Raleway, sans-serif;
-$code-font: 'Fira Code', 'Fira Mono', 'Inconsolata', monospace; 
+$code-font: 'Fira Code', 'Fira Mono', 'Inconsolata', monospace;
 
 $transition: 0.3s all;
 
@@ -32,13 +32,13 @@ $bp-quadhd: 3840px;
 @mixin widescreen {
   @media (min-width: #{$bp-desktop}) {
    @content;
- } 
+ }
 }
 
 @mixin quadhd {
   @media (min-width: #{$bp-widescreen}) and (max-width: #{$bp-quadhd}) {
    @content;
- } 
+ }
 }
 
 @mixin tablet {
